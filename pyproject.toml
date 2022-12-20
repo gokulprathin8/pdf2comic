@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pdf2comic"
+version = "0.1.0"
+description = ""
+authors = ["Gokul Prathin <gokulprathin8@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
