@@ -12,7 +12,3 @@ app = typer.Typer()
 @app.command()
 def convert(files: List[Path]):
     convert_to_cbz(files)
-
-
-if __name__ == "__main__":
-    app()

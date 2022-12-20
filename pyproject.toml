@@ -5,8 +5,15 @@ description = ""
 authors = ["Gokul Prathin <gokulprathin8@gmail.com>"]
 readme = "README.md"
 
+[tool.poetry.scripts]
+pdf2comic = "pdf2comic.cli:app"
+
 [tool.poetry.dependencies]
 python = "^3.10"
+typer = "^0.7.0"
+pdf2image = "^1.16.0"
+pillow = "^9.3.0"
+rich = "^12.6.0"
 
 
 [build-system]
