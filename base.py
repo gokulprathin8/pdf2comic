@@ -6,20 +6,18 @@ from copy import deepcopy
 from pdf2image import convert_from_path
 
 cmd_args = sys.argv
-file_name = 'sample.pdf'
 
 file_lst = deepcopy(cmd_args)
 file_lst = file_lst[1:]
 
 current_wk_dir = os.getcwd()
-target_file = current_wk_dir + file_name
 rand_hex = str(uuid.uuid4().hex)
 
 for file in file_lst:
     if not os.path.exists('tmp'):
         os.makedirs('tmp')
 
-    pdf_images = convert_from_path(file_name)
+    pdf_images = convert_from_path(file)
     for page_order in range(len(pdf_images)):
         pdf_images[page_order].save('tmp/' + 'page' + str(page_order) + rand_hex + '.jpg', 'JPEG')
     file_no_ext = file[:-4]
